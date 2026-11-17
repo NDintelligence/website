@@ -22,7 +22,7 @@
   var news = (window.MIS_NEWS || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
 
   function card(p, i) {
-    return '<a class="card rv d' + (i % 3) + '" href="post.html?id=' + encodeURIComponent(p.id) + '">' +
+    return '<a class="card rv d' + (i % 3) + '" href="/post/?id=' + encodeURIComponent(p.id) + '">' +
       '<div class="zoom"><div class="ph" style="background-image:url(\'' + esc(p.image) + '\')"></div></div>' +
       '<div class="body"><div class="meta">' + esc(p.category) + ' · ' + esc(p.dateLabel) + '</div>' +
       '<h3>' + esc(p.title) + '</h3><p class="sm">' + esc(p.summary) + '</p><span class="more">Read more</span></div></a>';
@@ -56,13 +56,13 @@
   if (post) {
     var id = new URLSearchParams(location.search).get('id');
     var p = news.filter(function (x) { return x.id === id; })[0];
-    if (!p) { post.innerHTML = '<h1>Post not found</h1><p><a class="more" href="news.html">Back to all news</a></p>'; }
+    if (!p) { post.innerHTML = '<h1>Post not found</h1><p><a class="more" href="/news/">Back to all news</a></p>'; }
     else {
       document.title = p.title + ' – MiS';
       var html = '<div class="meta">' + esc(p.category) + ' · ' + esc(p.dateLabel) + '</div><h1>' + esc(p.title) + '</h1><div class="rule"></div>' +
         '<img src="' + esc(p.image) + '" alt="">' + (p.body || []).map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('');
       if (p.source && p.source.url) html += '<p class="sm">Source: <a href="' + esc(p.source.url) + '" rel="noopener">' + esc(p.source.label || p.source.url) + '</a></p>';
-      html += '<p><a class="more" href="news.html">Back to all news</a></p>';
+      html += '<p><a class="more" href="/news/">Back to all news</a></p>';
       post.innerHTML = html;
     }
   }

@@ -1,7 +1,7 @@
 /*
   MiS NEWS – edit this file to add or update news.
   Add the newest post at the TOP of the list. Each post needs:
-    id        short unique name, lowercase with hyphens (used in the link: post.html?id=...)
+    id        short unique name, lowercase with hyphens (used in the link: /post/?id=...)
     date      "YYYY-MM-DD" (used for sorting)
     dateLabel text shown to readers, e.g. "16 November 2026"
     category  "Company" or "Market"
@@ -18,7 +18,7 @@ window.MIS_NEWS = [
     category: "Company",
     title: "Integrated SCADA completed at the MSSP solar-plus-storage plant, Thailand",
     summary: "MiS has completed the Integrated SCADA for a 40 MWac solar and 60 MWh storage plant in Thailand.",
-    image: "images/p01-mssp-overview.jpg",
+    image: "/images/p01-mssp-overview.jpg",
     body: [
       "MiS has completed its scope at the MSSP plant in Thailand. The plant combines 40 MWac of solar PV with 60 MWh of battery energy storage, a 33/115 kV substation with a 50 MVA transformer, and a 115 kV line of about 2 km.",
       "MiS supplied the Integrated SCADA: one system that monitors and controls all plant data from the PV plant, the BESS and the 115 kV substation equipment, with connection to EGAT's SCADA infrastructure.",
@@ -32,7 +32,7 @@ window.MIS_NEWS = [
     category: "Company",
     title: "Electrical review and statutory certification completed at Birla Carbon Thailand, Rayong",
     summary: "Drawing review, site inspection and statutory certification for the BCTR Greenfield Project.",
-    image: "images/p09-bctr-inspection.jpg",
+    image: "/images/p09-bctr-inspection.jpg",
     body: [
       "MiS has completed its work on the Birla Carbon Thailand (BCTR) Greenfield Project in Rayong. The scope covered the review and certification of electrical drawings, technical documents, single-line diagrams and equipment specifications, followed by on-site physical inspections and safety checks.",
       "Certification forms were submitted to the Department of Labour Protection and Welfare (DLPW) and the Department of Industrial Works (DIW).",
@@ -46,7 +46,7 @@ window.MIS_NEWS = [
     category: "Market",
     title: "Vietnam's revised PDP8: what the storage target means for project owners",
     summary: "The revised Power Development Plan VIII sets a target of 10,000–16,300 MW of battery storage by 2030.",
-    image: "images/v01-mu-cang-chai-2.jpg",
+    image: "/images/v01-mu-cang-chai-2.jpg",
     body: [
       "Vietnam's revised Power Development Plan VIII (Decision 768/QD-TTg, 15 April 2025) expands solar, wind and LNG capacity through 2030–2035 and sets a target of 10,000–16,300 MW of battery energy storage by 2030.",
       "For owners and investors, storage changes the control and compliance scope of a project: the energy management system, the power plant controller and the SCADA connection to the system operator all need to be designed for it from the start.",

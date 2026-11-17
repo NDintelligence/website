@@ -4,10 +4,10 @@ Static website: upload the whole folder to any web host (public_html / www). The
 
 ## Pages
 - index.html – Home
-- services.html – Services (five advisory packages, control solutions, market partner)
-- projects.html – MiS references (MSSP Lopburi, Birla Carbon Thailand)
-- about.html – About, team, team experience, contact
-- news.html – News list · post.html – single news post
+- services/index.html – Services (five advisory packages, control solutions, market partner)
+- projects/index.html – MiS references (MSSP Lopburi, Birla Carbon Thailand)
+- about/index.html – About, team, team experience, contact
+- news/index.html – News list · post/index.html – single news post
 
 ## Add or edit news
 1. Put the photo in `images/` (JPG, about 1600 px wide).
@@ -19,3 +19,6 @@ Edit the .html files directly. The header and footer are repeated in every .html
 
 ## Contact form
 The form opens the visitor's email app addressed to info@mi-energies.com. To receive messages directly from the website, connect the form to a form service or the host's mail script.
+
+## GitHub Pages URLs
+Pages use directory URLs: `/`, `/services/`, `/projects/`, `/about/`, `/news/`, and `/post/?id=...`. Edit each directory’s `index.html`. The legacy root `.html` pages redirect old bookmarks, preserving query strings and anchors when JavaScript is enabled. Assets and internal links use site-root paths. Preview with a local HTTP server at the domain root.
